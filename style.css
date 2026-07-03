@@ -493,3 +493,103 @@ dialog::backdrop { background: rgba(0,0,0,.75); }
     grid-template-columns: 1fr 1fr;
   }
 }
+
+
+.version-badge {
+  display: inline-block;
+  margin-left: .35rem;
+  padding: .1rem .4rem;
+  border: 1px solid var(--accent-2);
+  border-radius: 999px;
+  color: var(--accent-2);
+  font-size: .68rem;
+  vertical-align: middle;
+}
+
+.generic-tracker-grid {
+  display: grid;
+  gap: .75rem;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+}
+
+.tracker-field {
+  display: grid;
+  gap: .45rem;
+  margin-top: .65rem;
+}
+
+.tracker-field label {
+  margin: 0;
+  color: var(--muted);
+  font-size: .8rem;
+}
+
+.tracker-field input[type="text"],
+.tracker-field select {
+  padding: .7rem;
+}
+
+.reminder-list {
+  display: grid;
+  gap: .45rem;
+  margin: .65rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.reminder-list li {
+  position: relative;
+  padding: .55rem .65rem .55rem 1.75rem;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  color: var(--muted);
+  line-height: 1.45;
+  font-size: .82rem;
+}
+
+.reminder-list li::before {
+  content: "◆";
+  position: absolute;
+  left: .65rem;
+  color: var(--accent-2);
+}
+
+.phase-match {
+  border-color: var(--accent-2) !important;
+  color: var(--text) !important;
+  background: #352c20;
+}
+
+.once-grid {
+  display: grid;
+  gap: .5rem;
+  margin-top: .65rem;
+}
+
+.once-grid .check-row {
+  margin: 0;
+  padding: .55rem .65rem;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+}
+
+.profile-note {
+  margin-top: .8rem;
+  padding: .65rem .75rem;
+  border-left: 3px solid var(--accent-2);
+  color: var(--muted);
+  background: rgba(255,255,255,.025);
+  font-size: .78rem;
+  line-height: 1.55;
+}
+
+.expansion-option {
+  padding: .75rem;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: rgba(255,255,255,.02);
+}
+.desolation-panel {
+  margin-bottom: 1rem;
+  border-color: #6f5430;
+}

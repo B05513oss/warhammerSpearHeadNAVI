@@ -1,10 +1,10 @@
 {
-  "name": "SPEARHEAD NAVI",
+  "name": "SPEARHEAD NAVI 完全収録版",
   "short_name": "SpearheadNAVI",
   "start_url": "./index.html",
   "display": "standalone",
   "background_color": "#12100f",
   "theme_color": "#7a1f1f",
   "lang": "ja",
-  "description": "Warhammer Age of Sigmar Spearhead 対戦ナビゲーター（軍固有管理対応）"
+  "description": "Warhammer Age of Sigmar Spearhead 48軍と荒廃拡張対応の対戦ナビゲーター"
 }

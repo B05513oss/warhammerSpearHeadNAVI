@@ -6,13 +6,13 @@
   <meta name="theme-color" content="#7a1f1f" />
   <title>SPEARHEAD NAVI</title>
   <link rel="manifest" href="manifest.json" />
-  <link rel="stylesheet" href="style.css?v=031" />
+  <link rel="stylesheet" href="style.css?v=101" />
 </head>
 <body>
   <header class="app-header">
     <div>
       <h1>SPEARHEAD NAVI</h1>
-      <p>スピアヘッド対戦ナビゲーター</p>
+      <p>スピアヘッド対戦ナビゲーター <span class="version-badge">全48軍＋荒廃拡張 v1.0</span></p>
     </div>
     <button id="resetBtn" class="ghost danger">新しい対戦</button>
   </header>
@@ -50,6 +50,11 @@
             <option value="City of Ash">City of Ash</option>
             <option value="Custom">カスタム／未指定</option>
           </select>
+        </label>
+
+        <label class="check-row expansion-option">
+          <input id="desolationMode" type="checkbox" />
+          <span>拡張ルール「荒廃の定命の諸領域」を使用</span>
         </label>
 
         <div class="turn-order-picker">
@@ -108,6 +113,40 @@
         </article>
       </section>
 
+
+      <section id="desolationPanel" class="panel desolation-panel hidden">
+        <div class="army-tools-head">
+          <div>
+            <span class="eyebrow">EXPANSION MODULE</span>
+            <h2>荒廃の定命の諸領域</h2>
+          </div>
+          <span class="badge">拡張ルール</span>
+        </div>
+        <div class="generic-tracker-grid">
+          <div class="tool-card">
+            <h3>自分の荒廃ポイント</h3>
+            <div id="playerDesolationCounter"></div>
+          </div>
+          <div class="tool-card">
+            <h3>相手の荒廃ポイント</h3>
+            <div id="opponentDesolationCounter"></div>
+          </div>
+          <div class="tool-card">
+            <h3>荒廃状態</h3>
+            <label class="check-row"><input id="desolatedObjective1" type="checkbox"><span>目標1</span></label>
+            <label class="check-row"><input id="desolatedObjective2" type="checkbox"><span>目標2</span></label>
+            <label class="check-row"><input id="desolatedObjective3" type="checkbox"><span>目標3</span></label>
+          </div>
+          <div class="tool-card">
+            <h3>確認事項</h3>
+            <ul class="reminder-list">
+              <li>荒廃ポイントの獲得条件を確認</li>
+              <li>ポイントを消費した効果を記録</li>
+              <li>荒廃した目標・地形の状態を更新</li>
+            </ul>
+          </div>
+        </div>
+      </section>
 
       <section class="panel army-tools-panel">
         <div class="army-tools-head">
@@ -178,6 +217,6 @@
     </form>
   </dialog>
 
-  <script src="script.js?v=031"></script>
+  <script src="script.js?v=101"></script>
 </body>
 </html>
