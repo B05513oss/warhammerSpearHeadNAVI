@@ -1,10 +1,10 @@
 {
-  "name": "SPEARHEAD NAVI 完全収録版 v1.0.1",
+  "name": "SPEARHEAD NAVI 完全収録版 v1.0.2",
   "short_name": "SpearheadNAVI",
   "start_url": "./index.html",
   "display": "standalone",
   "background_color": "#12100f",
   "theme_color": "#7a1f1f",
   "lang": "ja",
-  "description": "Warhammer Age of Sigmar Spearhead 48軍と荒廃拡張対応（キャッシュ完全回避版）"
+  "description": "Warhammer Age of Sigmar Spearhead 48軍と荒廃拡張対応。荒廃拡張選択時はCity of Ashを自動設定。"
 }
