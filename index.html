@@ -6,12 +6,12 @@
   <meta name="theme-color" content="#7a1f1f" />
   <title>SPEARHEAD NAVI</title>
   <link rel="manifest" href="manifest.json" />
-  <link rel="stylesheet" href="style-v110.css" />
+  <link rel="stylesheet" href="style-v120.css" />
 </head>
 <body>
   <header class="app-header">
     <div>
-      <h1>SPEARHEAD NAVI <span class="version-badge">v1.1.0</span></h1>
+      <h1>SPEARHEAD NAVI <span class="version-badge">v1.2.0</span></h1>
       <p>スピアヘッド対戦ナビゲーター <span class="version-badge">全48軍＋荒廃拡張 v1.0</span></p>
     </div>
     <button id="resetBtn" class="ghost danger">新しい対戦</button>
@@ -132,6 +132,32 @@
         </div>
       </section>
 
+      <section class="panel round-score-panel">
+        <div class="army-tools-head">
+          <div>
+            <span class="eyebrow">ROUND SCORE</span>
+            <h2>このラウンドの得点</h2>
+          </div>
+          <span id="roundScoreLabel" class="badge">第1ラウンド</span>
+        </div>
+        <div class="round-score-grid">
+          <div class="tool-card">
+            <h3 id="roundPlayerName">自分</h3>
+            <div id="roundPlayerScoreCounter"></div>
+          </div>
+          <div class="tool-card">
+            <h3 id="roundOpponentName">相手</h3>
+            <div id="roundOpponentScoreCounter"></div>
+          </div>
+          <div class="tool-card">
+            <h3>ラウンド処理</h3>
+            <button id="applyRoundScoreBtn" class="primary">合計得点へ反映</button>
+            <button id="resetRoundScoreBtn" class="ghost">このラウンドを0に戻す</button>
+            <p id="roundScoreStatus" class="profile-note">まだ合計へ反映していません。</p>
+          </div>
+        </div>
+      </section>
+
       <section id="liveReminderPanel" class="panel live-reminder-panel">
         <div class="army-tools-head">
           <div>
@@ -141,6 +167,17 @@
           <span id="liveReminderCount" class="badge">0件</span>
         </div>
         <div id="liveReminderContent"></div>
+      </section>
+
+      <section class="panel action-log-panel">
+        <div class="army-tools-head">
+          <div>
+            <span class="eyebrow">ACTION LOG</span>
+            <h2>処理履歴</h2>
+          </div>
+          <button id="clearActionLogBtn" class="ghost">履歴を消去</button>
+        </div>
+        <div id="actionLogContent"></div>
       </section>
 
       <section id="desolationPanel" class="panel desolation-panel hidden">
@@ -246,6 +283,6 @@
     </form>
   </dialog>
 
-  <script src="script-v110.js"></script>
+  <script src="script-v120.js"></script>
 </body>
 </html>

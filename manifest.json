@@ -1,10 +1,10 @@
 {
-  "name": "SPEARHEAD NAVI v1.1.0",
+  "name": "SPEARHEAD NAVI v1.2.0",
   "short_name": "SpearheadNAVI",
   "start_url": "./index.html",
   "display": "standalone",
   "background_color": "#12100f",
   "theme_color": "#7a1f1f",
   "lang": "ja",
-  "description": "全48軍・荒廃拡張対応。現在フェイズとラウンドに応じた軍固有リマインダーを自動表示。"
+  "description": "全48軍・荒廃拡張対応。完了ボタン付きフェイズリマインダー、増援警告、ラウンド得点反映、処理履歴を追加。"
 }
