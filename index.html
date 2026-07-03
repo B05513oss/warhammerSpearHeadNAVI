@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#7a1f1f" />
+  <title>SPEARHEAD NAVI</title>
+  <link rel="manifest" href="manifest.json" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="app-header">
+    <div>
+      <h1>SPEARHEAD NAVI</h1>
+      <p>スピアヘッド対戦ナビゲーター</p>
+    </div>
+    <button id="resetBtn" class="ghost danger">新しい対戦</button>
+  </header>
+
+  <main class="app-shell">
+    <section id="setupScreen" class="screen">
+      <div class="panel">
+        <h2>対戦準備</h2>
+
+        <label>
+          自分の名前
+          <input id="playerName" type="text" value="自分" maxlength="20" />
+        </label>
+
+        <label>
+          自分のスピアヘッド
+          <select id="playerArmy"></select>
+        </label>
+
+        <label>
+          相手の名前
+          <input id="opponentName" type="text" value="相手" maxlength="20" />
+        </label>
+
+        <label>
+          相手のスピアヘッド
+          <select id="opponentArmy"></select>
+        </label>
+
+        <label>
+          ゲームパック
+          <select id="battlepack">
+            <option value="Fire and Jade">Fire and Jade</option>
+            <option value="Sand and Bone">Sand and Bone</option>
+            <option value="City of Ash">City of Ash</option>
+            <option value="Custom">カスタム／未指定</option>
+          </select>
+        </label>
+
+        <div class="turn-order-picker">
+          <span>第1ラウンドの先攻</span>
+          <div class="segmented">
+            <button id="playerFirstBtn" class="active">自分</button>
+            <button id="opponentFirstBtn">相手</button>
+          </div>
+        </div>
+
+        <button id="startBtn" class="primary large">対戦を開始</button>
+      </div>
+    </section>
+
+    <section id="battleScreen" class="screen hidden">
+      <div class="round-strip">
+        <button id="prevRoundBtn" class="ghost">← 前ラウンド</button>
+        <div>
+          <span class="eyebrow">BATTLE ROUND</span>
+          <strong id="roundLabel">1 / 4</strong>
+        </div>
+        <button id="nextRoundBtn" class="ghost">次ラウンド →</button>
+      </div>
+
+      <section class="scoreboard">
+        <article class="player-card">
+          <div>
+            <span class="side-label">自分</span>
+            <h2 id="playerTitle">自分</h2>
+            <p id="playerArmyLabel"></p>
+          </div>
+          <div class="score-control">
+            <button data-score="player" data-delta="-1">−</button>
+            <strong id="playerScore">0</strong>
+            <button data-score="player" data-delta="1">＋</button>
+          </div>
+        </article>
+
+        <div class="priority-card">
+          <span>現在の先攻</span>
+          <button id="priorityToggle" class="priority-button">自分</button>
+          <small>タップして切替</small>
+        </div>
+
+        <article class="player-card opponent">
+          <div>
+            <span class="side-label">相手</span>
+            <h2 id="opponentTitle">相手</h2>
+            <p id="opponentArmyLabel"></p>
+          </div>
+          <div class="score-control">
+            <button data-score="opponent" data-delta="-1">−</button>
+            <strong id="opponentScore">0</strong>
+            <button data-score="opponent" data-delta="1">＋</button>
+          </div>
+        </article>
+      </section>
+
+      <section class="panel phase-panel">
+        <div class="phase-head">
+          <div>
+            <span class="eyebrow">CURRENT STEP</span>
+            <h2 id="phaseTitle">ラウンド開始</h2>
+          </div>
+          <span id="turnOwnerBadge" class="badge">自分の手番</span>
+        </div>
+
+        <p id="phaseDescription" class="phase-description"></p>
+
+        <div class="checklist" id="phaseChecklist"></div>
+
+        <div class="phase-actions">
+          <button id="prevPhaseBtn" class="ghost">← 戻る</button>
+          <button id="nextPhaseBtn" class="primary">次へ →</button>
+        </div>
+      </section>
+
+      <section class="panel compact-grid">
+        <div>
+          <h3>対戦メモ</h3>
+          <textarea id="battleMemo" rows="5" placeholder="使用済み能力、目標、残りモデル数など"></textarea>
+        </div>
+
+        <div>
+          <h3>ラウンド確認</h3>
+          <label class="check-row">
+            <input id="battleTacticCheck" type="checkbox" />
+            バトルタクティクス確認済み
+          </label>
+          <label class="check-row">
+            <input id="scoreCheck" type="checkbox" />
+            得点確認済み
+          </label>
+          <label class="check-row">
+            <input id="reinforcementCheck" type="checkbox" />
+            増援・予備戦力確認済み
+          </label>
+        </div>
+      </section>
+    </section>
+  </main>
+
+  <dialog id="confirmDialog">
+    <form method="dialog">
+      <h2>新しい対戦を開始しますか？</h2>
+      <p>現在の対戦データは削除されます。</p>
+      <div class="dialog-actions">
+        <button value="cancel" class="ghost">キャンセル</button>
+        <button value="confirm" class="danger">削除して開始</button>
+      </div>
+    </form>
+  </dialog>
+
+  <script src="script.js"></script>
+</body>
+</html>

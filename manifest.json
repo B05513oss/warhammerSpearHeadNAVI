@@ -1,0 +1,10 @@
+{
+  "name": "SPEARHEAD NAVI",
+  "short_name": "SpearheadNAVI",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#12100f",
+  "theme_color": "#7a1f1f",
+  "lang": "ja",
+  "description": "Warhammer Age of Sigmar Spearhead 対戦ナビゲーター"
+}
