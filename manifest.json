@@ -1,10 +1,10 @@
 {
-  "name": "SPEARHEAD NAVI 完全収録版 v1.0.3",
+  "name": "SPEARHEAD NAVI v1.1.0",
   "short_name": "SpearheadNAVI",
   "start_url": "./index.html",
   "display": "standalone",
   "background_color": "#12100f",
   "theme_color": "#7a1f1f",
   "lang": "ja",
-  "description": "荒廃拡張パネル表示修正版。City of Ash自動設定、荒廃ポイント・荒廃目標管理対応。"
+  "description": "全48軍・荒廃拡張対応。現在フェイズとラウンドに応じた軍固有リマインダーを自動表示。"
 }

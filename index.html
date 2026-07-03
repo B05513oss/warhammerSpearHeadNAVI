@@ -6,12 +6,12 @@
   <meta name="theme-color" content="#7a1f1f" />
   <title>SPEARHEAD NAVI</title>
   <link rel="manifest" href="manifest.json" />
-  <link rel="stylesheet" href="style-v103.css" />
+  <link rel="stylesheet" href="style-v110.css" />
 </head>
 <body>
   <header class="app-header">
     <div>
-      <h1>SPEARHEAD NAVI <span class="version-badge">v1.0.3</span></h1>
+      <h1>SPEARHEAD NAVI <span class="version-badge">v1.1.0</span></h1>
       <p>スピアヘッド対戦ナビゲーター <span class="version-badge">全48軍＋荒廃拡張 v1.0</span></p>
     </div>
     <button id="resetBtn" class="ghost danger">新しい対戦</button>
@@ -114,6 +114,34 @@
         </article>
       </section>
 
+
+      <section class="panel battle-context-panel">
+        <div class="battle-context-grid">
+          <div>
+            <span class="eyebrow">BATTLEPACK</span>
+            <strong id="battlepackDisplay">—</strong>
+          </div>
+          <div>
+            <span class="eyebrow">CURRENT PRIORITY</span>
+            <strong id="priorityDisplay">—</strong>
+          </div>
+          <div>
+            <span class="eyebrow">ROUND STATUS</span>
+            <strong id="roundStatusDisplay">—</strong>
+          </div>
+        </div>
+      </section>
+
+      <section id="liveReminderPanel" class="panel live-reminder-panel">
+        <div class="army-tools-head">
+          <div>
+            <span class="eyebrow">LIVE REMINDERS</span>
+            <h2>今このタイミングで確認</h2>
+          </div>
+          <span id="liveReminderCount" class="badge">0件</span>
+        </div>
+        <div id="liveReminderContent"></div>
+      </section>
 
       <section id="desolationPanel" class="panel desolation-panel hidden">
         <div class="army-tools-head">
@@ -218,6 +246,6 @@
     </form>
   </dialog>
 
-  <script src="script-v103.js"></script>
+  <script src="script-v110.js"></script>
 </body>
 </html>
